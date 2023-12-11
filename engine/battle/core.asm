@@ -5764,7 +5764,7 @@ CheckPlayerHasUsableMoves:
 
 .done
 ; BUG: A Disabled but PP Up–enhanced move may not trigger Struggle (see docs/bugs_and_glitches.md)
-	and a
+	and $3f ;changed from a to $3f hopefully this fixes bug
 	ret nz
 
 .force_struggle

@@ -576,7 +576,7 @@ DefenseDownHit:
 	checkfaint
 	buildopponentrage
 ; BUG: Moves that lower Defense can do so after breaking a Substitute (see docs/bugs_and_glitches.md)
-	effectchance
+	;effectchance
 	defensedown
 	statdownmessage
 	endmove
