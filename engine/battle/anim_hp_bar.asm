@@ -16,7 +16,7 @@ _AnimateHPBar:
 	pop hl
 	pop bc
 	pop af
-	jr nc, .ShortAnimLoopjr 
+	jr nc, .ShortAnimLoop
 	ret
 
 .MoreThan48Pixels:
