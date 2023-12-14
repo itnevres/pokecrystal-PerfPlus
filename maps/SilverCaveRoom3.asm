@@ -26,6 +26,11 @@ Red:
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	disappear SILVERCAVEROOM3_RED
+	setevent EVENT_DECO_GOLD_TROPHY
+	setevent EVENT_DECO_CHARMANDER_DOLL
+	setevent EVENT_DECO_CLEFAIRY_DOLL
+	setevent EVENT_DECO_PIKACHU_DOLL
+	setevent EVENT_DECO_BIG_SNORLAX_DOLL
 	pause 15
 	special FadeInQuickly
 	pause 30

@@ -898,7 +898,7 @@ KantoGrassWildMons:
 	db 60, DITTO
 	end_grass_wildmons
 
-	def_grass_wildmons CERULEAN_CAVE_B2
+	def_grass_wildmons CERULEAN_CAVE_B1
 	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
 	; morn
 	db 50, TYRANITAR
