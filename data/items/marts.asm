@@ -114,7 +114,7 @@ MartGoldenrod2F2:
 	db -1 ; end
 
 MartGoldenrod3F:
-	db 7 ; # items
+	db 13 ; # items
 	db X_SPEED
 	db X_SPECIAL
 	db X_DEFEND
@@ -122,6 +122,12 @@ MartGoldenrod3F:
 	db DIRE_HIT
 	db GUARD_SPEC
 	db X_ACCURACY
+	db MOON_STONE 
+	db SUN_STONE 
+	db WATER_STONE 
+	db FIRE_STONE 
+	db LEAF_STONE 
+	db THUNDERSTONE
 	db -1 ; end
 
 MartGoldenrod4F:
@@ -227,8 +233,9 @@ MartBlackthorn:
 	db -1 ; end
 
 MartViridian:
-	db 9 ; # items
+	db 10 ; # items
 	db ULTRA_BALL
+	db MASTER_BALL
 	db HYPER_POTION
 	db FULL_HEAL
 	db REVIVE
@@ -240,8 +247,9 @@ MartViridian:
 	db -1 ; end
 
 MartPewter:
-	db 7 ; # items
+	db 8 ; # items
 	db GREAT_BALL
+	db MASTER_BALL
 	db SUPER_POTION
 	db SUPER_REPEL
 	db ANTIDOTE
@@ -251,9 +259,10 @@ MartPewter:
 	db -1 ; end
 
 MartCerulean:
-	db 9 ; # items
+	db 10 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
+	db MASTER_BALL
 	db SUPER_POTION
 	db SUPER_REPEL
 	db FULL_HEAL
@@ -264,8 +273,9 @@ MartCerulean:
 	db -1 ; end
 
 MartLavender:
-	db 8 ; # items
+	db 9 ; # items
 	db GREAT_BALL
+	db MASTER_BALL
 	db POTION
 	db SUPER_POTION
 	db MAX_REPEL
@@ -276,8 +286,9 @@ MartLavender:
 	db -1 ; end
 
 MartVermilion:
-	db 8 ; # items
+	db 9 ; # items
 	db ULTRA_BALL
+	db MASTER_BALL
 	db SUPER_POTION
 	db HYPER_POTION
 	db REVIVE
@@ -299,10 +310,11 @@ MartCeladon2F1:
 	db -1 ; end
 
 MartCeladon2F2:
-	db 10 ; # items
+	db 11 ; # items
 	db POKE_BALL
 	db GREAT_BALL
 	db ULTRA_BALL
+	db MASTER_BALL
 	db ESCAPE_ROPE
 	db FULL_HEAL
 	db ANTIDOTE
@@ -329,16 +341,12 @@ MartCeladon4F:
 	db -1 ; end
 
 MartCeladon5F1:
-	db 5 ; # items
+	db 12 ; # items
 	db HP_UP
 	db PROTEIN
 	db IRON
 	db CARBOS
 	db CALCIUM
-	db -1 ; end
-
-MartCeladon5F2:
-	db 7 ; # items
 	db X_ACCURACY
 	db GUARD_SPEC
 	db DIRE_HIT
@@ -348,10 +356,21 @@ MartCeladon5F2:
 	db X_SPECIAL
 	db -1 ; end
 
+MartCeladon5F2:
+	db 6 ; # items
+	db MOON_STONE 
+	db SUN_STONE 
+	db WATER_STONE 
+	db FIRE_STONE 
+	db LEAF_STONE 
+	db THUNDERSTONE
+	db -1 ; end
+
 MartFuchsia:
-	db 7 ; # items
+	db 8 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
+	db MASTER_BALL
 	db SUPER_POTION
 	db HYPER_POTION
 	db FULL_HEAL
@@ -360,9 +379,10 @@ MartFuchsia:
 	db -1 ; end
 
 MartSaffron:
-	db 8 ; # items
+	db 9 ; # items
 	db GREAT_BALL
 	db ULTRA_BALL
+	db MASTER_BALL
 	db HYPER_POTION
 	db MAX_POTION
 	db FULL_HEAL
