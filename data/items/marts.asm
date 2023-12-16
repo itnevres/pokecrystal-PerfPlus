@@ -299,7 +299,7 @@ MartVermilion:
 	db -1 ; end
 
 MartCeladon2F1:
-	db 7 ; # items
+	db 11 ; # items
 	db POTION
 	db SUPER_POTION
 	db HYPER_POTION
@@ -307,6 +307,10 @@ MartCeladon2F1:
 	db REVIVE
 	db SUPER_REPEL
 	db MAX_REPEL
+	db ELIXER
+	db MAX_ELIXER
+	db ETHER
+	db MAX_ETHER
 	db -1 ; end
 
 MartCeladon2F2:
@@ -334,10 +338,19 @@ MartCeladon3F:
 	db -1 ; end
 
 MartCeladon4F:
-	db 3 ; # items
+	db 12 ; # items
 	db POKE_DOLL
 	db LOVELY_MAIL
 	db SURF_MAIL
+	db LIGHT_BALL
+	db GOLD_LEAF
+	db POLKADOT_BOW
+	db TWISTEDSPOON
+	db BRICK_PIECE
+	db SILVER_LEAF
+	db LUCKY_PUNCH
+	db LEFTOVERS
+	db BRIGHTPOWDER
 	db -1 ; end
 
 MartCeladon5F1:

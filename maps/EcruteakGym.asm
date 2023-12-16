@@ -44,6 +44,7 @@ EcruteakGymMortyScript:
 	setmapscene ECRUTEAK_TIN_TOWER_ENTRANCE, SCENE_ECRUTEAKTINTOWERENTRANCE_NOOP
 	setevent EVENT_RANG_CLEAR_BELL_1
 	setevent EVENT_RANG_CLEAR_BELL_2
+
 .FightDone:
 	checkevent EVENT_GOT_TM30_SHADOW_BALL
 	iftrue .GotShadowBall
@@ -63,10 +64,18 @@ EcruteakGymMortyScript:
 
 .GotShadowBall:
 	writetext MortyFightDoneText
-	waitbutton
+	yesorno
+	iftrue .MortyRematch
+
 .NoRoomForShadowBall:
 	closetext
 	end
+
+.MortyRematch:
+	winlosstext Morty_RematchDefeat, 0
+	loadtrainer MORTY, MORTY1
+	startbattle
+	reloadmapafterbattle
 
 EcruteakGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -272,6 +281,17 @@ MortyFightDoneText:
 
 	para "I envy you for"
 	line "that…"
+
+	para "Why don't you"
+	line "show me what you"
+	
+	para "learned from your"
+	line "travels?"
+	done
+	
+Morty_RematchDefeat:
+	text "Im not good"
+	line "enough yet…"
 	done
 
 SageJeffreySeenText:
