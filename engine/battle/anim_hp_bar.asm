@@ -371,12 +371,14 @@ ShortHPBar_CalcPixelFrame:
 	ld b, 0
 .loop
 ; BUG: HP bar animation off-by-one error for low HP (see docs/bugs_and_glitches.md)
+; updated per pokemon perfect crystal and per bug page.
 	ld a, l
 	sub HP_BAR_LENGTH_PX
 	ld l, a
 	ld a, h
 	sbc $0
 	ld h, a
+	jr z, .done
 	jr c, .done
 	inc b
 	jr .loop

@@ -101,18 +101,20 @@ Text_Gained::
 
 _BoostedExpPointsText::
 ; BUG: Five-digit experience gain is printed incorrectly (see docs/bugs_and_glitches.md)
+; fixed
 	text_start
 	line "a boosted"
 	cont "@"
-	text_decimal wStringBuffer2, 2, 4
+	text_decimal wStringBuffer2, 2, 5
 	text " EXP. Points!"
 	prompt
 
 _ExpPointsText::
 ; BUG: Five-digit experience gain is printed incorrectly (see docs/bugs_and_glitches.md)
+; fixed
 	text_start
 	line "@"
-	text_decimal wStringBuffer2, 2, 4
+	text_decimal wStringBuffer2, 2, 5
 	text " EXP. Points!"
 	prompt
 
@@ -1574,4 +1576,9 @@ _OakText5::
 
 	para "That's why I study"
 	line "#MON every day."
+	prompt
+
+_CantDepositText::
+	text "Can't deposit"
+	line "this item."
 	prompt

@@ -403,12 +403,12 @@ KantoGrassWildMons:
 	db 15, FEAROW
 	db 15, FEAROW
 	db 18, MAROWAK
-	db 18, MAROWAK
+	db 18, MANKEY ;MAROWAK
 	; day
 	db 15, RATTATA
 	db 15, SPEAROW
-	db 15, RATICATE
-	db 15, FEAROW
+	db 15, MANKEY ;RATICATE
+	db 15, MANKEY ;FEAROW
 	db 15, FEAROW
 	db 18, MAROWAK
 	db 18, MAROWAK
@@ -431,7 +431,7 @@ KantoGrassWildMons:
 	db 15, FEAROW
 	db 15, MAROWAK
 	db 16, ELECTABUZZ
-	db 16, ELECTABUZZ
+	db 40, ZAPDOS ;ELECTABUZZ
 	; day
 	db 15, SPEAROW
 	db 17, VOLTORB
@@ -439,7 +439,7 @@ KantoGrassWildMons:
 	db 15, FEAROW
 	db 15, MAROWAK
 	db 18, ELECTABUZZ
-	db 18, ELECTABUZZ
+	db 40, ZAPDOS ;ELECTABUZZ
 	; nite
 	db 15, VENONAT
 	db 17, VOLTORB
@@ -447,7 +447,7 @@ KantoGrassWildMons:
 	db 15, VENOMOTH
 	db 15, ZUBAT
 	db 16, ELECTABUZZ
-	db 16, ELECTABUZZ
+	db 40, ZAPDOS ;ELECTABUZZ
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_11
@@ -817,29 +817,111 @@ KantoGrassWildMons:
 	def_grass_wildmons ROUTE_28
 	db 10 percent, 10 percent, 10 percent ; encounter rates: morn/day/nite
 	; morn
-	db 39, TANGELA
-	db 40, PONYTA
-	db 40, RAPIDASH
-	db 42, ARBOK
-	db 41, DODUO
-	db 43, DODRIO
-	db 43, DODRIO
+	db 49, TANGELA
+	db 50, PONYTA
+	db 50, RAPIDASH
+	db 52, ARBOK
+	db 51, DODUO
+	db 53, DODRIO
+	db 53, DODRIO
 	; day
-	db 39, TANGELA
-	db 40, PONYTA
-	db 40, RAPIDASH
-	db 42, ARBOK
-	db 41, DODUO
-	db 43, DODRIO
-	db 43, DODRIO
+	db 49, TANGELA
+	db 50, PONYTA
+	db 50, RAPIDASH
+	db 52, ARBOK
+	db 51, DODUO
+	db 53, DODRIO
+	db 53, DODRIO
 	; nite
-	db 39, TANGELA
-	db 40, POLIWHIRL
-	db 40, GOLBAT
-	db 40, POLIWHIRL
-	db 42, GOLBAT
-	db 42, GOLBAT
-	db 42, GOLBAT
+	db 49, TANGELA
+	db 50, POLIWHIRL
+	db 50, GOLBAT
+	db 50, POLIWHIRL
+	db 52, GOLBAT
+	db 52, GOLBAT
+	db 52, GOLBAT
 	end_grass_wildmons
 
-	db -1 ; end
+	def_grass_wildmons CERULEAN_CAVE_1F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 50, ELECTRODE
+	db 55, BLISSEY
+	db 52, ESPEON
+	db 54, GOLEM
+	db 55, ALAKAZAM
+	db 60, HITMONTOP
+	db 60, DITTO
+	; day
+	db 50, ELECTRODE
+	db 55, BLISSEY
+	db 52, ESPEON
+	db 54, GOLEM
+	db 55, ALAKAZAM
+	db 60, HITMONCHAN
+	db 60, DITTO
+	; nite
+	db 50, ELECTRODE
+	db 55, BLISSEY
+	db 52, UMBREON
+	db 54, GOLEM
+	db 55, ALAKAZAM
+	db 60, HITMONLEE
+	db 60, DITTO
+	end_grass_wildmons
+
+	def_grass_wildmons CERULEAN_CAVE_2F
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 50, VENOMOTH
+	db 55, PINSIR
+	db 52, ESPEON
+	db 54, STEELIX
+	db 55, GENGAR
+	db 60, TOGETIC
+	db 60, DITTO
+	; day
+	db 50, VENOMOTH
+	db 55, PINSIR
+	db 52, ESPEON
+	db 54, STEELIX
+	db 55, GENGAR
+	db 60, TOGETIC
+	db 60, DITTO
+	; nite
+	db 50, VENOMOTH
+	db 55, PINSIR
+	db 52, UMBREON
+	db 54, STEELIX
+	db 55, GENGAR
+	db 60, TOGETIC
+	db 60, DITTO
+	end_grass_wildmons
+
+	def_grass_wildmons CERULEAN_CAVE_B1
+	db 6 percent, 6 percent, 6 percent ; encounter rates: morn/day/nite
+	; morn
+	db 50, TYRANITAR
+	db 55, AERODACTYL
+	db 52, FLAREON
+	db 54, VICTREEBEL
+	db 55, JOLTEON
+	db 60, VAPOREON
+	db 60, DITTO
+	; day
+	db 50, TYRANITAR
+	db 55, AERODACTYL
+	db 52, FLAREON
+	db 54, VICTREEBEL
+	db 55, JOLTEON
+	db 60, VAPOREON
+	db 60, DITTO
+	; nite
+	db 50, TYRANITAR
+	db 55, AERODACTYL
+	db 52, FLAREON
+	db 54, VICTREEBEL
+	db 55, JOLTEON
+	db 60, VAPOREON
+	db 60, DITTO
+	end_grass_wildmons

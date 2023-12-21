@@ -38,6 +38,7 @@ GoldenrodGymWhitneyScript:
 	setevent EVENT_BEAT_BEAUTY_SAMANTHA
 	setevent EVENT_BEAT_LASS_CARRIE
 	setevent EVENT_BEAT_LASS_BRIDGET
+
 .FightDone:
 	opentext
 	checkevent EVENT_MADE_WHITNEY_CRY
@@ -61,6 +62,7 @@ GoldenrodGymWhitneyScript:
 	setflag ENGINE_PLAINBADGE
 	readvar VAR_BADGES
 	scall GoldenrodGymActivateRockets
+
 .GotPlainBadge:
 	writetext WhitneyPlainBadgeText
 	promptbutton
@@ -74,10 +76,18 @@ GoldenrodGymWhitneyScript:
 
 .GotAttract:
 	writetext WhitneyGoodCryText
-	waitbutton
+	yesorno
+	iftrue .WhitneyRematch
+
 .NoRoomForAttract:
 	closetext
 	end
+
+.WhitneyRematch:
+	winlosstext Whitney_RematchDefeat, 0
+	loadtrainer WHITNEY, WHITNEY1
+	startbattle
+	reloadmapafterbattle
 
 GoldenrodGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -266,6 +276,14 @@ WhitneyGoodCryText:
 
 	para "Come for a visit"
 	line "again! Bye-bye!"
+	
+	para "What? You want a"
+	line "rematch now?"
+	done
+
+Whitney_RematchDefeat:
+	text "Ah, I lost again"
+	line "sob…"
 	done
 
 LassCarrieSeenText:

@@ -86,8 +86,16 @@ BlackthornGymClairScript:
 
 .GotTM24:
 	writetext BlackthornGymClairText_League
-	waitbutton
+	yesorno
+	iftrue .ClairRematch
 	closetext
+	end
+
+.ClairRematch:
+	winlosstext Clair_RematchDefeat, 0
+	loadtrainer CLAIR, CLAIR1
+	startbattle
+	reloadmapafterbattle
 	end
 
 TrainerCooltrainermPaul:
@@ -281,6 +289,16 @@ BlackthornGymClairText_League:
 
 	para "Give it every-"
 	line "thing you've got."
+	
+	para "Or you can prove"
+	line "your worth to me"
+	
+	para "once again."
+	done
+	
+Clair_RematchDefeat:
+	text "I lost again?!"
+	line "This can't be!"
 	done
 
 CooltrainermPaulSeenText:

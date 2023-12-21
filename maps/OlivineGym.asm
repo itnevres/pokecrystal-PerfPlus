@@ -27,6 +27,7 @@ OlivineGymJasmineScript:
 	setflag ENGINE_MINERALBADGE
 	readvar VAR_BADGES
 	scall OlivineGymActivateRockets
+	
 .FightDone:
 	checkevent EVENT_GOT_TM23_IRON_TAIL
 	iftrue .GotIronTail
@@ -42,10 +43,18 @@ OlivineGymJasmineScript:
 
 .GotIronTail:
 	writetext Jasmine_GoodLuck
-	waitbutton
+	yesorno
+	iftrue .JasmineRematch
+
 .NoRoomForIronTail:
 	closetext
 	end
+
+.JasmineRematch:
+	winlosstext Jasmine_RematchDefeat, 0
+	loadtrainer JASMINE, JASMINE1
+	startbattle
+	reloadmapafterbattle
 
 OlivineGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
@@ -160,6 +169,17 @@ Jasmine_GoodLuck:
 	text "Um… I don't know"
 	line "how to say this,"
 	cont "but good luck…"
+	
+	para "But still…"
+	line "I think want to"
+	
+	para "challenge you"
+	line "again!"
+	done
+	
+Jasmine_RematchDefeat:
+	text "I'm still not"
+	line "good enough…"
 	done
 
 OlivineGymGuideText:

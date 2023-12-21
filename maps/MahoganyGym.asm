@@ -32,9 +32,10 @@ MahoganyGymPryceScript:
 	setflag ENGINE_GLACIERBADGE
 	readvar VAR_BADGES
 	scall MahoganyGymActivateRockets
+
 .FightDone:
 	checkevent EVENT_GOT_TM16_ICY_WIND
-	iftrue PryceScript_Defeat
+	iftrue .PryceScript_Defeat
 	setevent EVENT_BEAT_SKIER_ROXANNE
 	setevent EVENT_BEAT_SKIER_CLARISSA
 	setevent EVENT_BEAT_BOARDER_RONALD
@@ -43,20 +44,28 @@ MahoganyGymPryceScript:
 	writetext PryceText_GlacierBadgeSpeech
 	promptbutton
 	verbosegiveitem TM_ICY_WIND
-	iffalse MahoganyGym_NoRoomForIcyWind
+	iffalse .MahoganyGym_NoRoomForIcyWind
 	setevent EVENT_GOT_TM16_ICY_WIND
 	writetext PryceText_IcyWindSpeech
 	waitbutton
 	closetext
 	end
 
-PryceScript_Defeat:
+.PryceScript_Defeat:
 	writetext PryceText_CherishYourPokemon
-	waitbutton
-MahoganyGym_NoRoomForIcyWind:
+	yesorno
+	iftrue .PryceRematch
+
+.MahoganyGym_NoRoomForIcyWind:
 	closetext
 	end
 
+.PryceRematch:
+	winlosstext Pryce_RematchDefeat, 0
+	loadtrainer PRYCE, PRYCE1
+	startbattle
+	reloadmapafterbattle
+	
 MahoganyGymActivateRockets:
 	ifequal 7, .RadioTowerRockets
 	ifequal 6, .GoldenrodRockets
@@ -236,6 +245,16 @@ PryceText_CherishYourPokemon:
 
 	para "Cherish your time"
 	line "together!"
+	
+	para "Shall we test"
+	line "your bond with"
+	
+	para "your #MON?"
+	done
+	
+Pryce_RematchDefeat:
+	text "Your bond seems"
+	line "strong."
 	done
 
 BoarderRonaldSeenText:

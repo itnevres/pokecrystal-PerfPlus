@@ -24,6 +24,7 @@ SeafoamGymBlaineScript:
 	startbattle
 	iftrue .ReturnAfterBattle
 	appear SEAFOAMGYM_GYM_GUIDE
+
 .ReturnAfterBattle:
 	reloadmapafterbattle
 	setevent EVENT_BEAT_BLAINE
@@ -39,8 +40,16 @@ SeafoamGymBlaineScript:
 
 .FightDone:
 	writetext BlaineFightDoneText
-	waitbutton
+	yesorno
+	iftrue .BlaineRematch
 	closetext
+	end
+	
+.BlaineRematch:
+	winlosstext Blaine_RematchDefeat, 0
+	loadtrainer BLAINE, BLAINE1
+	startbattle
+	reloadmapafterbattle
 	end
 
 SeafoamGymGuideScript:
@@ -121,6 +130,17 @@ BlaineFightDoneText:
 
 	para "even stronger."
 	line "Just you watch!"
+	
+	para "I can show you"
+	line "my red-hot"
+	cont "fighting spirit"
+	
+	para "right now!"
+	done
+	
+Blaine_RematchDefeat:
+	text "BLAINE: My fire"
+	line "died out."
 	done
 
 SeafoamGymGuideWinText:
