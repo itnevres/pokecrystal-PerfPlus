@@ -347,7 +347,7 @@ AddSpriteGFX:
 
 LoadSpriteGFX:
 ; BUG: LoadSpriteGFX does not limit the capacity of UsedSprites (see docs/bugs_and_glitches.md)
-
+; Fixed
 	ld hl, wUsedSprites
 	ld b, SPRITE_GFX_LIST_CAPACITY
 .loop
@@ -365,7 +365,9 @@ LoadSpriteGFX:
 	ret
 
 .LoadSprite:
-	call GetSprite
+	push bc
+ 	call GetSprite
+	pop bc
 	ld a, l
 	ret
 

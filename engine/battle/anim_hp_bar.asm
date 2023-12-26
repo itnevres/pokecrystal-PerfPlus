@@ -180,11 +180,12 @@ LongAnim_UpdateVariables:
 	ld a, [hli]
 	ld b, a
 ; BUG: HP bar animation is slow for high HP (see docs/bugs_and_glitches.md)
+; Fixed
 	call ComputeHPBarPixels
+	ld a, e
 	pop bc
 	pop de
 	pop hl
-	ld a, e
 	ld hl, wCurHPBarPixels
 	cp [hl]
 	jr z, .loop

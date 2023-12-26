@@ -42,6 +42,7 @@ DragonsDenB1FCheckRivalCallback:
 
 DragonsDenB1F_ClairScene:
 ; BUG: Clair can give TM24 Dragonbreath twice (see docs/bugs_and_glitches.md)
+; FIXED IN DragonsDen1F
 	appear DRAGONSDENB1F_CLAIR
 	opentext
 	writetext ClairText_Wait
