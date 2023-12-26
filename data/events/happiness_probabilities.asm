@@ -10,5 +10,6 @@ HappinessData_YoungerHaircutBrother:
 
 HappinessData_DaisysGrooming:
 ; BUG: Daisy's grooming doesn't always increase happiness (see docs/bugs_and_glitches.md)
+; FIXED
 	db 50 percent,     2, HAPPINESS_GROOMING ; 50% chance
 	db -1,             2, HAPPINESS_GROOMING ; 50% chance

@@ -486,6 +486,7 @@ SlotsAction_PayoutAnim:
 	inc de
 .okay
 ; BUG: Slot machine payout sound effects cut each other off (see docs/bugs_and_glitches.md)
+; FIXED
 	ld [hl], e
 	dec hl
 	ld [hl], d

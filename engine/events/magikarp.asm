@@ -279,10 +279,10 @@ CalcMagikarpLength:
 
 .BCLessThanDE:
 ; BUG: Magikarp lengths can be miscalculated (see docs/bugs_and_glitches.md)
+; FIXED
 	ld a, b
 	cp d
-	ret c
-	; ret nc
+	ret nz
 	ld a, c
 	cp e
 	ret

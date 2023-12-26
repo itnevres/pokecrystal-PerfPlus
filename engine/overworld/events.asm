@@ -560,12 +560,13 @@ TryObjectEvent:
 	and MAPOBJECT_TYPE_MASK
 
 ; BUG: TryObjectEvent arbitrary code execution (see docs/bugs_and_glitches.md)
+; Fixed
 	push bc
 	ld de, 3
 	ld hl, ObjectEventTypeArray
 	call IsInArray
-	jr nc, .nope
 	pop bc
+	jr nc, .nope
 
 	inc hl
 	ld a, [hli]
