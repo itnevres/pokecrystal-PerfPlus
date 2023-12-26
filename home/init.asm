@@ -187,7 +187,7 @@ ClearWRAM::
 ; Wipe swappable WRAM banks (1-7)
 ; Assumes CGB or AGB
 ; BUG: ClearWRAM only clears WRAM bank 1 (see docs/bugs_and_glitches.md)
-
+; Fixed
 	ld a, 1
 .bank_loop
 	push af

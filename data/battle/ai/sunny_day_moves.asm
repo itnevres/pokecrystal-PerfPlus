@@ -2,6 +2,7 @@
 
 SunnyDayMoves:
 ; BUG: "Smart" AI does not encourage Solar Beam, Flame Wheel, or Moonlight during Sunny Day (see docs/bugs_and_glitches.md)
+; FIxed
 	db FIRE_PUNCH
 	db EMBER
 	db FLAMETHROWER
