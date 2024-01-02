@@ -38,6 +38,41 @@ TreeMonMaps:
 	treemon_map BLACKTHORN_CITY,           TREEMON_SET_CITY
 	treemon_map SILVER_CAVE_OUTSIDE,       TREEMON_SET_CITY
 	treemon_map ILEX_FOREST,               TREEMON_SET_FOREST
+
+; Kanto Tree Maps
+	treemon_map ROUTE_1,                   TREEMON_SET_KROUTE
+	treemon_map ROUTE_2,                   TREEMON_SET_KROUTE
+	treemon_map ROUTE_3,                   TREEMON_SET_KROUTE
+	treemon_map ROUTE_4,                   TREEMON_SET_KROUTE
+	treemon_map ROUTE_5,                   TREEMON_SET_KCITY
+	treemon_map ROUTE_6,                   TREEMON_SET_KCITY
+	treemon_map ROUTE_7,                   TREEMON_SET_KCITY
+	treemon_map ROUTE_8,                   TREEMON_SET_KROUTE
+	treemon_map ROUTE_9,                   TREEMON_SET_KROUTE
+	treemon_map ROUTE_10_NORTH,            TREEMON_SET_KROUTE
+	treemon_map ROUTE_10_SOUTH,            TREEMON_SET_KROUTE
+	treemon_map ROUTE_11,                  TREEMON_SET_KROUTE
+	treemon_map ROUTE_12,                  TREEMON_SET_KROUTE
+	treemon_map ROUTE_13,                  TREEMON_SET_KROUTE
+	treemon_map ROUTE_14,                  TREEMON_SET_KROUTE
+	treemon_map ROUTE_15,                  TREEMON_SET_KROUTE
+	treemon_map ROUTE_16,                  TREEMON_SET_KROUTE
+	treemon_map ROUTE_17,                  TREEMON_SET_KROUTE
+	treemon_map ROUTE_18,                  TREEMON_SET_KROUTE
+	treemon_map ROUTE_22,                  TREEMON_SET_KROUTE
+	treemon_map ROUTE_24,                  TREEMON_SET_KROUTE
+	treemon_map ROUTE_25,                  TREEMON_SET_KROUTE
+	treemon_map PALLET_TOWN,               TREEMON_SET_KTOWN
+	treemon_map VIRIDIAN_CITY,             TREEMON_SET_KCITY
+	treemon_map PEWTER_CITY,               TREEMON_SET_KCITY
+	treemon_map CERULEAN_CITY,             TREEMON_SET_KCITY
+	treemon_map VERMILION_CITY,            TREEMON_SET_KCITY
+	treemon_map LAVENDER_TOWN,             TREEMON_SET_KTOWN
+	treemon_map CELADON_CITY,              TREEMON_SET_KCITY
+	treemon_map SAFFRON_CITY,              TREEMON_SET_KCITY
+	treemon_map FUCHSIA_CITY,              TREEMON_SET_KCITY
+	treemon_map BILLS_HOUSE,               TREEMON_SET_KANTO
+
 	db -1
 
 RockMonMaps:
