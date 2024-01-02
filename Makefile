@@ -275,7 +275,8 @@ gfx/player/kris_back.2bpp: rgbgfx += -Z
 
 gfx/trainer_card/chris_card.2bpp: rgbgfx += -Z
 gfx/trainer_card/kris_card.2bpp: rgbgfx += -Z
-gfx/trainer_card/leaders.2bpp: tools/gfx += --trim-whitespace
+gfx/trainer_card/johto_leaders.2bpp: tools/gfx += --trim-whitespace
+gfx/trainer_card/kanto_leaders.2bpp: tools/gfx += --trim-whitespace
 
 gfx/overworld/chris_fish.2bpp: tools/gfx += --trim-whitespace
 gfx/overworld/kris_fish.2bpp: tools/gfx += --trim-whitespace
