@@ -44,11 +44,22 @@ Kurt now makes balls instantly
 
 # Third Branch (Bug Fixes) (12/25/2023)
 Updated all bug fixes in below link that had not already been incorporated.  
-[bug fixes]: https://pret.github.io/pokecrystal/bugs_and_glitches.html  
+   
+bug fixes: https://pret.github.io/pokecrystal/bugs_and_glitches.html  
 
 
-# Fourth Branch (quality of life improvements) (TBD)
-[tutorials]: https://github.com/pret/pokecrystal/wiki/Tutorials  
+# Fourth Branch (Play Preferences) (01/02/2024)
+Field Moves can now be used as long as a pokemon can learn them, the TM/HM is in the players posession, and any requirements (badges) have been met.   
+Pokemon no longer lose HP while walking the overworld.   
+Headbutt now works on Kanto trees.   
+Pokemon Center healing is now faster.   
+The Generation 6 experience system has been implemented.   
+Catching Pokemon now rewards experience to the Pokemon used.   
+TM/HMs now show their names when they are received.   
+Added a third trainer card page for Kanto Badges and made the tops of all leaders' heads visible on the trainer card pages. Also made them colored.   
+The opening "movie" has been removed.   
+
+tutorials: https://github.com/pret/pokecrystal/wiki/Tutorials  
 
 # Encounters Added to Make Every Pokemon Obtainable
 
@@ -79,6 +90,17 @@ Xatu has been added to Tin Tower 2F to be encountered during the day and night
 The encounters at Mount Silver have been given a slight level boost  
 The encounters in Cerulean Cave are a surprise  
 
+# Kanto Tree Headbutt Pokkemon Added
+Routes 1, 2, 3, 4, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 22, 24, 25:   
+HootHoot, Caterpie, Weedle, Kakuna, Exeggcute, Venonat, Butterfree, Beedrill   
+
+Routes 5, 6, 7 and Viridian, Pewter, Cerulean, Vermilion, Celadon, Saffron, and Fuchsia Cities:   
+Pidgey, Rattata, Mankey, Pidgeotto, Pinsir, Primeape   
+
+Pallet and Lavender Towns:   
+Spearow, Ekans, Mankey, Fearow, Heracross, Venomoth, Primeape   
+
+
 # Evolutions
 Haunter evolves into Gengar with a Moon Stone  
 Machoke evolves into Machamp with a Sun Stone  
@@ -89,32 +111,44 @@ Onix evolves into Steelix with a Sun Stone
 Scyther evolves into Scizor with a Leaf Stone  
 Slowpoke evolves into Slowking with a Water Stone  
 Poliwhirl evolves into Politoed with a Moon Stone  
-Porygon evolves into Porygon2 with a Thunderstone  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-    
-    
-  
-  
-  
+Porygon evolves into Porygon2 with a Thunderstone 
 #
 #
 #
 #
-#
-#
-#
-#
-#
+# 
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
+.     
 #
 #
 #

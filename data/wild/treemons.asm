@@ -9,6 +9,9 @@ TreeMons:
 	dw TreeMonSet_Lake
 	dw TreeMonSet_Forest
 	dw TreeMonSet_Rock
+	dw TreeMonSet_KCity
+	dw TreeMonSet_KTown
+	dw TreeMonSet_KRoute
 	assert_table_length NUM_TREEMON_SETS
 	dw TreeMonSet_City ; unused
 
@@ -128,4 +131,58 @@ TreeMonSet_Forest:
 TreeMonSet_Rock:
 	db 90, KRABBY,     15
 	db 10, SHUCKLE,    15
+	db -1
+
+TreeMonSet_KCity:
+; common
+	db 50, PIDGEY,     10
+	db 15, PIDGEY,     10
+	db 15, RATTATA,    10
+	db 10, MANKEY,     10
+	db  5, RATTATA,    10
+	db  5, MANKEY,     10
+	db -1
+; rare
+	db 50, PIDGEOTTO,  15
+	db 15, PINSIR,     10
+	db 15, PINSIR,     10
+	db 10, MANKEY,     10
+	db  5, RATTATA,    10
+	db  5, PRIMEAPE,   15
+	db -1
+	
+TreeMonSet_KRoute:
+; common
+	db 50, HOOTHOOT,   10
+	db 15, CATERPIE,   10
+	db 15, WEEDLE,     10
+	db 10, KAKUNA,     10
+	db  5, EXEGGCUTE,  10
+	db  5, EXEGGCUTE,  10
+	db -1
+; rare
+	db 50, HOOTHOOT,   10
+	db 15, VENONAT,    10
+	db 15, VENONAT,    10
+	db 10, EXEGGCUTE,  10
+	db  5, BUTTERFREE, 10
+	db  5, BEEDRILL,   10
+	db -1
+	
+TreeMonSet_KTown:
+; common
+	db 50, SPEAROW,    10
+	db 15, EKANS,      10
+	db 15, SPEAROW,    10
+	db 10, MANKEY,     10
+	db  5, MANKEY,     10
+	db  5, MANKEY,     10
+	db -1
+; rare
+	db 50, FEAROW,     15
+	db 15, HERACROSS,  10
+	db 15, HERACROSS,  10
+	db 10, MANKEY,     10
+	db  5, VENOMOTH,   15
+	db  5, PRIMEAPE,   15
 	db -1
