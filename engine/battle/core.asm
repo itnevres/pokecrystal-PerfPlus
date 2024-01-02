@@ -2191,6 +2191,8 @@ UpdateBattleStateAndExperienceAfterEnemyFaint:
 	ld a, [wBattleResult]
 	and BATTLERESULT_BITMASK
 	ld [wBattleResult], a ; WIN
+	; fallthrough
+ApplyExperienceAfterEnemyCaught:
 	; Preserve bits of non-fainted participants
 	ld a, [wBattleParticipantsNotFainted]
 	ld d, a
