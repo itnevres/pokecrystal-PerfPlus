@@ -460,6 +460,7 @@ AideScript_WalkPotion1:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight1
 	turnobject PLAYER, DOWN
 	scall AideScript_GivePotion
+	scall AideScript_GivePocketPC
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft1
 	end
 
@@ -467,6 +468,7 @@ AideScript_WalkPotion2:
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksRight2
 	turnobject PLAYER, DOWN
 	scall AideScript_GivePotion
+	scall AideScript_GivePocketPC
 	applymovement ELMSLAB_ELMS_AIDE, AideWalksLeft2
 	end
 
@@ -476,6 +478,16 @@ AideScript_GivePotion:
 	promptbutton
 	verbosegiveitem POTION
 	writetext AideText_AlwaysBusy
+	waitbutton
+	closetext
+	end
+
+AideScript_GivePocketPC:
+	opentext
+	writetext AideText_GetPocketPCText
+	promptbutton
+	giveitem POCKET_PC
+	writetext AideText_PocketPCInfoText
 	waitbutton
 	closetext
 	setscene SCENE_ELMSLAB_NOOP
@@ -501,7 +513,9 @@ AideScript_GiveYouBalls:
 	promptbutton
 	getitemname STRING_BUFFER_4, POKE_BALL
 	scall AideScript_ReceiveTheBalls
-	giveitem POKE_BALL, 5
+	giveitem POKE_BALL, 10
+	call AideScript_ReceiveNuggets
+	giveitem NUGGET, 10
 	writetext AideText_ExplainBalls
 	promptbutton
 	itemnotify
@@ -510,6 +524,10 @@ AideScript_GiveYouBalls:
 	end
 
 AideScript_ReceiveTheBalls:
+	jumpstd ReceiveItemScript
+	end
+
+AideScript_ReceiveNuggets:
 	jumpstd ReceiveItemScript
 	end
 
@@ -1267,6 +1285,10 @@ AideText_ExplainBalls:
 	para "Throw # BALLS"
 	line "at wild #MON"
 	cont "to get them."
+	
+	para "Also take"
+	line "these"
+	cont "nuggets."
 	done
 
 ElmsLabOfficerText1:
@@ -1366,6 +1388,18 @@ ElmsLabPCText:
 
 	para "…It says on the"
 	line "screen…"
+	done
+
+AideText_GetPocketPCText:
+	text "Oh, I have this"
+	line "for you too."
+
+	para "It's a Pocket PC!"
+	done
+	
+AideText_PocketPCInfoText:
+	text "Use this to manage"
+	line "your party."
 	done
 
 ElmsLab_MapEvents:
