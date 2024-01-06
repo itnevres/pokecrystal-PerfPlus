@@ -2801,7 +2801,11 @@ wDudeNumBalls:: db
 wDudeBalls:: ds 2 * 4 + 1
 ENDU
 
-	ds 4
+wOtherTrainerType:: db
+wTrainerGroupBank:: db
+wRandomTrainerNumPokemon:: db
+wRandomTrainerTotalPokemon:: db
+wRandomTrainerRandomNumbers:: ds 6
 
 wd430:: ; mobile
 wBattleAction:: db
@@ -2813,7 +2817,6 @@ wMapEventStatus:: db
 wScriptFlags::
 ; bit 3: run deferred script
 	db
-	ds 1
 wScriptFlags2::
 ; bit 0: count steps
 ; bit 1: coord events
@@ -2829,7 +2832,6 @@ wScriptPos:: dw
 
 wScriptStackSize:: db
 wScriptStack:: ds 3 * 5
-	ds 1
 wScriptDelay:: db
 
 wDeferredScriptBank::
@@ -2838,11 +2840,10 @@ wScriptTextBank::
 wDeferredScriptAddr::
 wScriptTextAddr::
 	dw
-	ds 1
 wWildEncounterCooldown:: db
 
 wXYComparePointer:: dw
-	ds 4
+	ds 1
 
 wBattleScriptFlags:: db
 	ds 1
