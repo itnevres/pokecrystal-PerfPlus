@@ -15,7 +15,7 @@ Changed probability rates now (25, 25, 20, 10, 10, 5, 5 % for grass, and 45, 30,
 Adjusted moves for Abra evos, Typhlosion, Onix, Steelix, Dodrio, Mantine, Heracross, Ho-oh and Lugia ("data\pokemon\evos_attacks.asm")  
 Adjusted stats for Abra evos, Onix, Steelix, Doduo/Dodrio, Mantine, Heracross (data/pokemon/base_stats/(associated Pokemon).asm)  
 Pokemon that normally evolve with trades, evolve through the use of stones. Kadabra also evolves at level 36 and Onix evolves at level 32 ("data\pokemon\evos_attacks.asm")  
-Made Mega Punch/Kick fighting moves, Made Flash useful in battle (electric type, 90 damage, 95%), Made Cut useful in battle (grass type, 90 damage, 95%) ("data\moves\moves.asm")  
+Made Mega Punch/Kick fighting moves, Made Flash useful in battle (electric type, 90 damage, 95%), Made Cut useful in battle (BUG type, 80 damage, 95%) ("data\moves\moves.asm")  
 
 # Second Branch (Update to Match Perfect Cyrstal plus some extras) (12/20/2023):
 All 251 Pokemon catchable.  
@@ -61,6 +61,27 @@ The opening "movie" has been removed.
 
 tutorials: https://github.com/pret/pokecrystal/wiki/Tutorials  
 
+# Fifth Branch (PokeCrystal Update Match) (01/02/2024)
+SFX Bug Fix
+
+# Sixth Branch (Quality of Life Improvements) (01/08/2024)
+Improved the Trainer Rematch System   
+Steal Types are no longer poinsed by Twineedle   
+Changed default trainer names   
+Added new battle text to distinguish status mov misses and fails   
+Multiple items can be harvested from fruit trees   
+Added Brake to Cycling Road and Increased odds of encountering a shiny pokemon to 1 in 50 (if attack, defense, speed, and special DVs are all >=10)   
+Added a Move Relearner   
+Added a Pocket PC and made it so the Elm Aid who gives pokeballs now give 10 pokeballs and 10 nuggets   
+Added back end code to allow more trainer parties, with individual DVs, stat experience, nicknames, variable teams, randomized teams, hapiness   
+Added new teams to all the gym leaders based on how many badges have been acquired. Allows for increased rematch challenge as more badges are acquired.   
+Added new teams for the E4 so that after you start acquiring Jhoto badges their levels jump 20-25 levels.   
+Implemented Physical/Special Split and made Shadow Ball special.   
+Added aditional Variation to wild pokemon encounter levels, using surf encounter code (method 3)   
+Adjusted steel moves to be more accurate, increased power on crabhammer, made cut bug type, additional various move adjustments.   
+   
+tutorials: https://github.com/pret/pokecrystal/wiki/Tutorials  
+
 # Encounters Added to Make Every Pokemon Obtainable
 
 Vulpix can be encountered at Route 36, 37 during the morning and day  
@@ -70,10 +91,10 @@ Girafarig has a 5% chance of encounter at Route 43 in the morning and day
 Remoraid has a 30% chance of encounter in the water at Route 41  
 Chikorita has a 5% chance of encounter at Route 31  
 Cyndaquil has a 5% chance of encounter in Dark cave (Violet city entrance)  
-Totodile has a 5% chance of encounter at Whirl Islands B2F  
+Totodile has a 5% chance of encounter at Slowpoke Well B1F  
 Bulbasaur has a 5% chance of encounter in Ilex Forest  
 Charmander has a 5% chance of encounter at Burned Tower B1F  
-Squirtle has a 5% chance of encounter at Whirl Islands B2F  
+Squirtle has a 5% chance of encounter at Route 32  
 Omanyte and Kabuto can be encountered at the Whirl Islands in Lugia's Chamber (not in the water) at night  
 Zapdos has a 5% chance of encounter at a secret location in the day (See the bottom of the document to reveal location)  
 Moltres has a 5% chance of encounter at a secret location in the morning (See the bottom of the document to reveal location)  
@@ -158,4 +179,4 @@ Porygon evolves into Porygon2 with a Thunderstone
 Articuno is in the Ice Path B3F.  
 Zapdos is at Route 10, outside the powerplant.  
 Moltres is in Mount Silver room 2.  
-Mew is at the summit of Mount Silver (where Red is) during the morning. I imagine that Red is up there looking for a Mew.  
+Mew is at the summit of Mount Silver (where Red is) during the morning. Red is likely up there looking for a Mew.  

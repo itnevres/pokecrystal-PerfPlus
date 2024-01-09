@@ -148,6 +148,7 @@ WildFled_EnemyFled_LinkBattleCanceled:
 	jr c, .skip_sfx
 
 ; BUG: SFX_RUN does not play correctly when a wild Pokémon flees from battle (see docs/bugs_and_glitches.md)
+; Fixed
 	ld de, SFX_RUN
 	call WaitPlaySFX
 
@@ -5661,14 +5662,18 @@ MoveInfoBox:
 	ld [wStringBuffer1], a
 	call .PrintPP
 
+	farcall UpdateMoveData
+	ld a, [wPlayerMoveStruct + MOVE_ANIM]
+	ld b, a
+	farcall GetMoveCategoryName
 	hlcoord 1, 9
-	ld de, .Type
+	ld de, wStringBuffer1
 	call PlaceString
 
-	hlcoord 7, 11
+	ld h, b
+	ld l, c
 	ld [hl], "/"
 
-	callfar UpdateMoveData
 	ld a, [wPlayerMoveStruct + MOVE_ANIM]
 	ld b, a
 	hlcoord 2, 10
@@ -5679,8 +5684,6 @@ MoveInfoBox:
 
 .Disabled:
 	db "Disabled!@"
-.Type:
-	db "TYPE/@"
 
 .PrintPP:
 	hlcoord 5, 11
@@ -6027,15 +6030,20 @@ LoadEnemyMon:
 	jp .Happiness
 
 .InitDVs:
-; Trainer DVs
-
-; All trainers have preset DVs, determined by class
-; See GetTrainerDVs for more on that
-	farcall GetTrainerDVs
-; These are the DVs we'll use if we're actually in a trainer battle
 	ld a, [wBattleMode]
 	dec a
-	jr nz, .UpdateDVs
+	jr z, .WildDVs
+
+; Trainer DVs
+	ld a, [wCurPartyMon]
+	ld hl, wOTPartyMon1DVs
+	call GetPartyLocation
+	ld b, [hl]
+	inc hl
+	ld c, [hl]
+	jr .UpdateDVs
+
+.WildDVs:
 
 ; Wild DVs
 ; Here's where the fun starts
@@ -6191,6 +6199,16 @@ LoadEnemyMon:
 .Happiness:
 ; Set happiness
 	ld a, BASE_HAPPINESS
+	ld a, [wBattleMode]
+	dec a
+	ld a, BASE_HAPPINESS
+	jr z, .load_happiness
+
+	ld a, [wCurPartyMon]
+	ld hl, wOTPartyMon1Happiness
+	call GetPartyLocation
+	ld a, [hl]
+.load_happiness
 	ld [wEnemyMonHappiness], a
 ; Set level
 	ld a, [wCurPartyLevel]
@@ -6199,6 +6217,14 @@ LoadEnemyMon:
 	ld de, wEnemyMonMaxHP
 	ld b, FALSE
 	ld hl, wEnemyMonDVs - (MON_DVS - MON_STAT_EXP + 1)
+	ld a, [wBattleMode]
+	cp TRAINER_BATTLE
+	jr nz, .no_stat_exp
+	ld a, [wCurPartyMon]
+	ld hl, wOTPartyMon1StatExp - 1
+	call GetPartyLocation
+	ld b, TRUE
+.no_stat_exp
 	predef CalcMonStats
 
 ; If we're in a trainer battle,
@@ -6359,15 +6385,29 @@ LoadEnemyMon:
 	ld a, [wTempEnemyMonSpecies]
 	ld [wNamedObjectIndex], a
 
-	call GetPokemonName
-
 ; Did we catch it?
 	ld a, [wBattleMode]
 	and a
 	ret z
 
 ; Update enemy nickname
+	ld a, [wBattleMode]
+	dec a ; WILD_BATTLE?
+	jr z, .no_nickname
+	ld a, [wOtherTrainerType]
+	bit TRAINERTYPE_NICKNAME_F, a
+	jr z, .no_nickname
+	ld a, [wCurPartyMon]
+	ld hl, wOTPartyMonNicknames
+	ld bc, MON_NAME_LENGTH
+	call AddNTimes
+	ld a, [hl]
+	cp "@"
+	jr nz, .got_nickname
+.no_nickname
+	call GetPokemonName
 	ld hl, wStringBuffer1
+.got_nickname
 	ld de, wEnemyMonNickname
 	ld bc, MON_NAME_LENGTH
 	call CopyBytes
