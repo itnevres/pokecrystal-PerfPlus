@@ -319,7 +319,7 @@ JohtoGrassWildMons:
 	db 15, ZUBAT
 	db 12, KOFFING
 	db 16, KOFFING
-	db 5, CHARMANDER ;WEEZING
+	db 5,  CHARMANDER ;WEEZING
 	; day
 	db 14, KOFFING ;RATTATA
 	db 16, KOFFING
@@ -327,7 +327,7 @@ JohtoGrassWildMons:
 	db 15, ZUBAT
 	db 12, SLUGMA ;KOFFING
 	db 16, SLUGMA ;KOFFING
-	db 5, CHARMANDER ;WEEZING
+	db 5,  CHARMANDER ;WEEZING
 	; nite
 	db 14, RATTATA
 	db 14, KOFFING
@@ -335,7 +335,7 @@ JohtoGrassWildMons:
 	db 15, ZUBAT
 	db 12, KOFFING
 	db 16, WEEZING ;KOFFING
-	db 5, CHARMANDER ;WEEZING
+	db 5,  CHARMANDER ;WEEZING
 	end_grass_wildmons
 
 	def_grass_wildmons NATIONAL_PARK
@@ -515,7 +515,7 @@ JohtoGrassWildMons:
 	db 6, SLOWPOKE
 	db 8, ZUBAT
 	db 8, SLOWPOKE
-	db 8, SLOWPOKE
+	db 5, TOTODILE ; SLOWPOKE
 	; day
 	db 5, ZUBAT
 	db 6, ZUBAT
@@ -523,7 +523,7 @@ JohtoGrassWildMons:
 	db 6, SLOWPOKE
 	db 8, ZUBAT
 	db 8, SLOWPOKE
-	db 8, SLOWPOKE
+	db 5, TOTODILE; SLOWPOKE
 	; nite
 	db 5, ZUBAT
 	db 6, ZUBAT
@@ -531,7 +531,7 @@ JohtoGrassWildMons:
 	db 6, SLOWPOKE
 	db 8, ZUBAT
 	db 8, SLOWPOKE
-	db 8, SLOWPOKE
+	db 5, TOTODILE; SLOWPOKE
 	end_grass_wildmons
 
 	def_grass_wildmons SLOWPOKE_WELL_B2F
@@ -543,7 +543,7 @@ JohtoGrassWildMons:
 	db 21, SLOWPOKE
 	db 23, GOLBAT
 	db 23, SLOWPOKE
-	db 23, SLOWPOKE
+	db 10, TOTODILE; SLOWPOKE
 	; day
 	db 21, ZUBAT
 	db 23, ZUBAT
@@ -551,7 +551,7 @@ JohtoGrassWildMons:
 	db 21, SLOWPOKE
 	db 23, GOLBAT
 	db 23, SLOWPOKE
-	db 23, SLOWPOKE
+	db 10, TOTODILE; SLOWPOKE
 	; nite
 	db 21, ZUBAT
 	db 23, ZUBAT
@@ -559,7 +559,7 @@ JohtoGrassWildMons:
 	db 21, SLOWPOKE
 	db 23, GOLBAT
 	db 23, SLOWPOKE
-	db 23, SLOWPOKE
+	db 10, TOTODILE; SLOWPOKE
 	end_grass_wildmons
 
 	def_grass_wildmons ILEX_FOREST
@@ -1018,24 +1018,24 @@ JohtoGrassWildMons:
 	db 24, SEEL
 	db 27, GOLBAT
 	db 26, SEEL
-	db 10, SQUIRTLE
-	db 10, TOTODILE ;SEEL
+	db 26, SHELLDER
+	db 26, SEEL
 	; day
 	db 26, KRABBY
 	db 25, ZUBAT
 	db 24, SEEL
 	db 27, GOLBAT
 	db 26, SEEL
-	db 10, SQUIRTLE
-	db 10, TOTODILE ;SEEL
+	db 26, SHELLDER
+	db 26, SEEL
 	; nite
 	db 24, KRABBY
 	db 25, ZUBAT
 	db 26, KRABBY
 	db 27, GOLBAT
 	db 26, GOLBAT
-	db 10, TOTODILE
-	db 10, SQUIRTLE ;GOLBAT
+	db 26, SHELLDER
+	db 26, SEEL
 	end_grass_wildmons
 
 	def_grass_wildmons WHIRL_ISLAND_LUGIA_CHAMBER
@@ -1327,7 +1327,7 @@ JohtoGrassWildMons:
 	db 6, HOPPIP
 	db 7, MAREEP ;PIDGEY
 	db 7, MAREEP ;HOPPIP
-	db 7, HOPPIP
+	db 5, SQUIRTLE ;HOPPIP
 	; day
 	db 4, EKANS
 	db 5, RATTATA
@@ -1335,15 +1335,15 @@ JohtoGrassWildMons:
 	db 6, MAREEP ;HOPPIP
 	db 7, PIDGEY
 	db 7, MAREEP ;HOPPIP
-	db 7, HOPPIP
+	db 5, SQUIRTLE ;HOPPIP
 	; nite
 	db 4, WOOPER
-	db 5, RATTATA
 	db 7, BELLSPROUT
 	db 6, ZUBAT
 	db 7, HOOTHOOT
 	db 7, GASTLY
-	db 7, GASTLY
+	db 5, RATTATA
+	db 5, SQUIRTLE ;GASTLY
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_33
@@ -1510,8 +1510,8 @@ JohtoGrassWildMons:
 	db 16, MAGNEMITE
 	db 16, MURKROW ;NOCTOWL
 	db 16, MURKROW ;MEOWTH
-	db 16, MEOWTH
-	db 16, MEOWTH
+	db 16, NOCTOWL ;MEOWTH
+	db 16, NOCTOWL ;MEOWTH
 	end_grass_wildmons
 
 	def_grass_wildmons ROUTE_39
