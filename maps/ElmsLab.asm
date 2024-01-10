@@ -476,7 +476,7 @@ AideScript_GivePotion:
 	opentext
 	writetext AideText_GiveYouPotion
 	promptbutton
-	verbosegiveitem POTION
+	verbosegiveitem POTION, 5
 	writetext AideText_AlwaysBusy
 	waitbutton
 	closetext
@@ -487,6 +487,7 @@ AideScript_GivePocketPC:
 	writetext AideText_GetPocketPCText
 	promptbutton
 	giveitem POCKET_PC
+	giveitem POKE_BALL, 5
 	writetext AideText_PocketPCInfoText
 	waitbutton
 	closetext
@@ -1394,7 +1395,8 @@ AideText_GetPocketPCText:
 	text "Oh, I have this"
 	line "for you too."
 
-	para "It's a Pocket PC!"
+	para "It's Pokeballs"
+	line "and a Pocket PC!"
 	done
 	
 AideText_PocketPCInfoText:

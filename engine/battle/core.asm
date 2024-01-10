@@ -6820,12 +6820,12 @@ BadgeStatBoosts:
 	ld c, 4
 .CheckBadge:
 ; BUG: Glacier Badge may not boost Special Defense depending on the value of Special Attack (see docs/bugs_and_glitches.md)
-; Fixed
+; This fix breaks Battles
 	ld a, b
 	srl b
-	push af
+;;	push af
 	call c, BoostStat
-	push af
+;	push af
 	inc hl
 	inc hl
 ; Check every other badge.
