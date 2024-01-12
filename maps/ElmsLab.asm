@@ -515,7 +515,6 @@ AideScript_GiveYouBalls:
 	getitemname STRING_BUFFER_4, POKE_BALL
 	scall AideScript_ReceiveTheBalls
 	giveitem POKE_BALL, 10
-	call AideScript_ReceiveNuggets
 	giveitem NUGGET, 10
 	writetext AideText_ExplainBalls
 	promptbutton
@@ -525,10 +524,6 @@ AideScript_GiveYouBalls:
 	end
 
 AideScript_ReceiveTheBalls:
-	jumpstd ReceiveItemScript
-	end
-
-AideScript_ReceiveNuggets:
 	jumpstd ReceiveItemScript
 	end
 
@@ -1288,8 +1283,7 @@ AideText_ExplainBalls:
 	cont "to get them."
 	
 	para "Also take"
-	line "these"
-	cont "nuggets."
+	line "these nuggets."
 	done
 
 ElmsLabOfficerText1:

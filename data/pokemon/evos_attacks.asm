@@ -844,6 +844,7 @@ KadabraEvosAttacks:
 	db 1, TELEPORT
 	db 1, KINESIS
 	db 1, CONFUSION
+	db 16, CONFUSION
 	db 18, DISABLE
 	db 21, PSYBEAM
 	db 26, RECOVER
@@ -1211,7 +1212,7 @@ MukEvosAttacks:
 	db 33, HARDEN
 	db 37, DISABLE
 	db 45, SLUDGE
-	db 46, ACID_ARMOR
+	db 45, ACID_ARMOR
 	db 60, SLUDGE_BOMB
 	db 0 ; no more level-up moves
 

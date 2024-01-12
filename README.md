@@ -1,23 +1,23 @@
-# Pokémon Crystal
-
-This is a branch of the Pret disassembly of Pokémon Crystal. https://github.com/pret/pokecrystal  
-This mod is heavily influenced by the Perfect Crystal Hack. https://github.com/Superegz/Pokemon-Perfect-Crystal
-
-It builds the following ROMs:
-
-- Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc `sha1: f2f52230b536214ef7c9924f483392993e226cfb`
-
-Mostly minor changes have been made, see below for details:
-
-# Initial Branch (Personal Preferences) (12/10/2023):
+# Pokémon Crystal   
+   
+This is a branch of the Pret disassembly of Pokémon Crystal. https://github.com/pret/pokecrystal     
+This mod is heavily influenced by the Perfect Crystal Hack. https://github.com/Superegz/Pokemon-Perfect-Crystal   
+   
+It builds the following ROMs:   
+   
+- Pokemon - Crystal Version (UE) (V1.1) [C][!].gbc `sha1: f2f52230b536214ef7c9924f483392993e226cfb`   
+   
+Mostly minor changes have been made, see below for details:   
+   
+# Initial Branch (Personal Preferences) (12/10/2023):   
 Added Abra, Larvitar, Onix, Doduo, Gastly(N,M), Geodude(D), Mantine, Phanpy to route 46 and made all level 5 ("data\wild\johto_grass.asm")  
 Changed probability rates now (25, 25, 20, 10, 10, 5, 5 % for grass, and 45, 30, 25% for water) ("data\wild\probabilities.asm")  
 Adjusted moves for Abra evos, Typhlosion, Onix, Steelix, Dodrio, Mantine, Heracross, Ho-oh and Lugia ("data\pokemon\evos_attacks.asm")  
 Adjusted stats for Abra evos, Onix, Steelix, Doduo/Dodrio, Mantine, Heracross (data/pokemon/base_stats/(associated Pokemon).asm)  
 Pokemon that normally evolve with trades, evolve through the use of stones. Kadabra also evolves at level 36 and Onix evolves at level 32 ("data\pokemon\evos_attacks.asm")  
 Made Mega Punch/Kick fighting moves, Made Flash useful in battle (electric type, 90 damage, 95%), Made Cut useful in battle (BUG type, 80 damage, 95%) ("data\moves\moves.asm")  
-
-# Second Branch (Update to Match Perfect Cyrstal plus some extras) (12/20/2023):
+   
+# Second Branch (Update to Match Perfect Cyrstal plus some extras) (12/20/2023):   
 All 251 Pokemon catchable.  
 Added Cerulean Cave and made Mewtwo encounterable here.  
 Pokemon that normally evolve with trades, evolve through the use of stones.  
@@ -31,7 +31,7 @@ Reuseable TM’s.
 Hold down B to run.  
 Simplified the clock reset procedure on the intro screen. Simply hold down “Down”, “B” and “Select”. No need to enter in a password.  
 Made all but one of the unobtainable decorations unlock upon defeating the Elite 4.  
-  
+     
 Also includes some personal preference tweaks:  
 Made legendary pokemon more catchable (from catch rate of 3 to 35)  
 Made starter pokemon more catchable (from catch rate 45 to 145)  
@@ -41,14 +41,13 @@ Game corner coins are now cheaper and game corner rewards are now cheaper
 Increased start and mom Money C:\cygwin64\home\Serve\Pokemon-Perfect-Crystal-master\gfx  
 HMs are now forgetable (needs validation)  
 Kurt now makes balls instantly  
-
-# Third Branch (Bug Fixes) (12/25/2023)
+   
+# Third Branch (Bug Fixes) (12/25/2023)   
 Updated all bug fixes in below link that had not already been incorporated.  
    
 bug fixes: https://pret.github.io/pokecrystal/bugs_and_glitches.html  
-
-
-# Fourth Branch (Play Preferences) (01/02/2024)
+   
+# Fourth Branch (Play Preferences) (01/02/2024)   
 Field Moves can now be used as long as a pokemon can learn them, the TM/HM is in the players posession, and any requirements (badges) have been met.   
 Pokemon no longer lose HP while walking the overworld.   
 Headbutt now works on Kanto trees.   
@@ -58,13 +57,13 @@ Catching Pokemon now rewards experience to the Pokemon used.
 TM/HMs now show their names when they are received.   
 Added a third trainer card page for Kanto Badges and made the tops of all leaders' heads visible on the trainer card pages. Also made them colored.   
 The opening "movie" has been removed.   
-
+   
 tutorials: https://github.com/pret/pokecrystal/wiki/Tutorials  
-
-# Fifth Branch (PokeCrystal Update Match) (01/02/2024)
-SFX Bug Fix
-
-# Sixth Branch (Quality of Life Improvements) (01/08/2024)
+   
+# Fifth Branch (PokeCrystal Update Match) (01/02/2024)   
+SFX Bug Fix   
+   
+# Sixth Branch (Quality of Life Improvements) (01/08/2024)   
 Improved the Trainer Rematch System   
 Steal Types are no longer poinsed by Twineedle   
 Changed default trainer names   
@@ -81,9 +80,8 @@ Added aditional Variation to wild pokemon encounter levels, using surf encounter
 Adjusted steel moves to be more accurate, increased power on crabhammer, made cut bug type, additional various move adjustments.   
    
 tutorials: https://github.com/pret/pokecrystal/wiki/Tutorials  
-
-# Encounters Added to Make Every Pokemon Obtainable
-
+   
+# Encounters Added to Make Every Pokemon Obtainable   
 Vulpix can be encountered at Route 36, 37 during the morning and day  
 Mankey can be encountered at Route 42 and 9 during the morning and day  
 Mareep can be encountered at Route 32 during the morning and day  
@@ -101,8 +99,8 @@ Moltres has a 5% chance of encounter at a secret location in the morning (See th
 Articuno has a 5% chance of encounter at a secret location at night (See the bottom of the document to reveal location)  
 Mewtwo is avaliable in a restored Cerulean Cave  
 Mew has a 5% chance of encounter at a secret location at a secret time of day (See the bottom of the document to reveal location)  
-
-# Encounters Changed to Bring Johto Pokemon Previously Only Obtainable in Kanto to Johto and Add Some Small Variety
+   
+# Encounters Changed to Bring Johto Pokemon Previously Only Obtainable in Kanto to Johto and Add Some Small Variety   
 Houndour has been added to Route 36 and 37 to be encountered at night  
 Murkrow has been added to Route 38 to be encountered at night  
 Slugma has been added to Burned Tower B1F to be encountered  during the day  
@@ -110,29 +108,206 @@ Natu has been added to Tin Tower 2F to be encountered during the day
 Xatu has been added to Tin Tower 2F to be encountered during the day and night  
 The encounters at Mount Silver have been given a slight level boost  
 The encounters in Cerulean Cave are a surprise  
-
-# Kanto Tree Headbutt Pokkemon Added
+   
+# Kanto Tree Headbutt Pokkemon Added   
 Routes 1, 2, 3, 4, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 22, 24, 25:   
 HootHoot, Caterpie, Weedle, Kakuna, Exeggcute, Venonat, Butterfree, Beedrill   
-
+   
 Routes 5, 6, 7 and Viridian, Pewter, Cerulean, Vermilion, Celadon, Saffron, and Fuchsia Cities:   
 Pidgey, Rattata, Mankey, Pidgeotto, Pinsir, Primeape   
-
+   
 Pallet and Lavender Towns:   
 Spearow, Ekans, Mankey, Fearow, Heracross, Venomoth, Primeape   
-
-
-# Evolutions
+   
+# Evolutions   
 Haunter evolves into Gengar with a Moon Stone  
 Machoke evolves into Machamp with a Sun Stone  
 Graveler evolves into Golem with a Sun Stone  
-Kadabra evolves into Alakazam with a Moon Stone  
+Kadabra evolves into Alakazam with a Moon Stone or at level 36  
 Seadra evolves into Kingdra with a Water Stone  
-Onix evolves into Steelix with a Sun Stone  
+Onix evolves into Steelix with a Sun Stone or at level 25   
 Scyther evolves into Scizor with a Leaf Stone  
 Slowpoke evolves into Slowking with a Water Stone  
 Poliwhirl evolves into Politoed with a Moon Stone  
 Porygon evolves into Porygon2 with a Thunderstone 
+   
+# Adjusted Learnsets   
+Abra:    
+	db 1, TELEPORT   
+	db 5, TACKLE   
+	db 11, CONFUSION   
+   
+Kadabra:   
+	db 1, TELEPORT   
+	db 1, KINESIS   
+	db 1, CONFUSION   
+	db 16, CONFUSION   
+	db 18, DISABLE   
+	db 21, PSYBEAM   
+	db 26, RECOVER   
+	db 28, THUNDERPUNCH   
+	db 31, FUTURE_SIGHT   
+	db 38, PSYCHIC_M   
+	db 45, REFLECT   
+   
+Alakazam:   
+	db 1, TELEPORT   
+	db 1, KINESIS   
+	db 1, CONFUSION   
+	db 16, CONFUSION   
+	db 18, DISABLE   
+	db 21, PSYBEAM   
+	db 26, RECOVER   
+	db 28, THUNDERPUNCH   
+	db 31, FUTURE_SIGHT   
+	db 38, PSYCHIC_M   
+	db 45, REFLECT   
+   
+Onix:   
+	db 1, TACKLE   
+	db 1, SCREECH   
+	db 5, BITE   
+	db 10, BIND   
+	db 14, ROCK_THROW   
+	db 23, HARDEN   
+	db 27, RAGE   
+	db 30, ROCK_SLIDE   
+	db 32, DIG   
+	db 36, SANDSTORM   
+	db 40, SLAM   
+	db 45, EARTHQUAKE   
+	db 49, CRUNCH   
+	db 60, HYPER_BEAM   
+   
+Steelix:   
+	db 1, TACKLE   
+	db 1, SCREECH   
+	db 5, BITE   
+	db 10, BIND   
+	db 14, ROCK_THROW   
+	db 23, HARDEN   
+	db 25, IRON_TAIL   
+	db 27, RAGE   
+	db 30, ROCK_SLIDE   
+	db 32, DIG   
+	db 36, SANDSTORM   
+	db 40, SLAM   
+	db 45, EARTHQUAKE   
+	db 49, CRUNCH   
+	db 60, HYPER_BEAM   
+   
+Eevee:   
+	db 1, TACKLE   
+	db 1, TAIL_WHIP   
+	db 8, SAND_ATTACK   
+	db 16, GROWL   
+	db 23, QUICK_ATTACK   
+	db 30, BITE   
+	db 36, BATON_PASS   
+	db 38, FOCUS_ENERGY   
+	db 42, TAKE_DOWN   
+   
+Dratini:   
+	db 1, WRAP   
+	db 1, LEER   
+	db 8, THUNDERSHOCK   
+	db 15, TWISTER   
+	db 22, DRAGON_RAGE   
+	db 29, SLAM   
+	db 32, THUNDERBOLT   
+	db 36, AGILITY   
+	db 43, SAFEGUARD   
+	db 50, OUTRAGE   
+	db 57, HYPER_BEAM   
+   
+Dragonair:   
+	db 1, WRAP   
+	db 1, LEER   
+	db 1, THUNDER_WAVE   
+	db 1, TWISTER   
+	db 8, THUNDERSHOCK   
+	db 15, TWISTER   
+	db 22, DRAGON_RAGE   
+	db 29, SLAM   
+	db 32, THUNDERBOLT   
+	db 38, AGILITY   
+	db 42, ICE_BEAM   
+	db 47, SAFEGUARD   
+	db 56, OUTRAGE   
+	db 65, HYPER_BEAM   
+   
+Dragonite:   
+	db 1, WRAP   
+	db 1, LEER   
+	db 1, THUNDER_WAVE   
+	db 1, TWISTER   
+	db 8, THUNDERSHOCK   
+	db 15, TWISTER   
+	db 22, DRAGON_RAGE   
+	db 29, SLAM   
+	db 32, THUNDERBOLT   
+	db 38, AGILITY   
+	db 42, ICE_BEAM   
+	db 47, SAFEGUARD   
+	db 55, WING_ATTACK   
+	db 61, OUTRAGE   
+	db 75, HYPER_BEAM   
+   
+Quilava:   
+	db 1, LEER   
+	db 1, SMOKESCREEN   
+	db 6, SMOKESCREEN   
+	db 12, EMBER   
+	db 21, QUICK_ATTACK   
+	db 31, FLAME_WHEEL   
+	db 37, FIRE_PUNCH   
+	db 42, SWIFT   
+	db 48, EARTHQUAKE   
+	db 54, FLAMETHROWER   
+	db 66, FIRE_BLAST   
+   
+Typhlosion:   
+	db 1, TACKLE   
+	db 1, LEER   
+	db 1, SMOKESCREEN   
+	db 1, EMBER   
+	db 6, SMOKESCREEN   
+	db 12, EMBER   
+	db 21, QUICK_ATTACK   
+	db 31, FLAME_WHEEL   
+	db 39, FIRE_PUNCH   
+	db 45, SWIFT   
+	db 52, EARTHQUAKE   
+	db 60, FLAMETHROWER   
+	db 75, FIRE_BLAST   
+   
+Heracross:   
+	db 1, TACKLE   
+	db 1, LEER   
+	db 6, HORN_ATTACK   
+	db 12, ENDURE   
+	db 15, HEADBUTT   
+	db 19, FURY_ATTACK   
+	db 23, LEECH_LIFE   
+	db 27, COUNTER   
+	db 35, TAKE_DOWN   
+	db 38, MEGA_PUNCH   
+	db 44, REVERSAL   
+	db 46, MEGA_KICK   
+	db 54, MEGAHORN   
+   
+Mantine:   
+	db 1, TACKLE   
+	db 1, BUBBLE   
+	db 10, SUPERSONIC   
+	db 18, BUBBLEBEAM   
+	db 25, TAKE_DOWN   
+	db 32, AGILITY   
+	db 37, ICE_BEAM   
+	db 40, WING_ATTACK   
+	db 45, HYDRO_PUMP   
+	db 49, CONFUSE_RAY   
+   
 #
 #
 #

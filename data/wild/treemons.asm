@@ -30,9 +30,9 @@ TreeMonSet_Canyon:
 	db  5, AIPOM,      10
 	db -1
 ; rare
-	db 50, SPEAROW,    10
-	db 15, HERACROSS,  10
-	db 15, HERACROSS,  10
+	db 30, SPEAROW,    10
+	db 25, HERACROSS,  10
+	db 25, HERACROSS,  10
 	db 10, AIPOM,      10
 	db  5, AIPOM,      10
 	db  5, AIPOM,      10
@@ -48,9 +48,9 @@ TreeMonSet_Town:
 	db  5, AIPOM,      10
 	db -1
 ; rare
-	db 50, SPEAROW,    10
-	db 15, HERACROSS,  10
-	db 15, HERACROSS,  10
+	db 30, SPEAROW,    10
+	db 25, HERACROSS,  10
+	db 25, HERACROSS,  10
 	db 10, AIPOM,      10
 	db  5, AIPOM,      10
 	db  5, AIPOM,      10
@@ -179,9 +179,9 @@ TreeMonSet_KTown:
 	db  5, MANKEY,     10
 	db -1
 ; rare
-	db 50, FEAROW,     15
-	db 15, HERACROSS,  10
-	db 15, HERACROSS,  10
+	db 40, FEAROW,     15
+	db 20, HERACROSS,  10
+	db 20, HERACROSS,  10
 	db 10, MANKEY,     10
 	db  5, VENOMOTH,   15
 	db  5, PRIMEAPE,   15
