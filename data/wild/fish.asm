@@ -142,7 +142,7 @@ FishGroups:
 	db  40 percent,     MAGIKARP,   40
 	db  70 percent,     time_group 15
 	db  90 percent + 1, MAGIKARP,   40
-	db 100 percent,     MAGIKARP,   40
+	db 100 percent,     GYARADOS,   40
 
 .Dratini_2_Old:
 	db  70 percent + 1, MAGIKARP,   10

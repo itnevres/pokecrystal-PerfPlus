@@ -26,6 +26,7 @@ Red:
 	special FadeBlackQuickly
 	special ReloadSpritesNoPalettes
 	disappear SILVERCAVEROOM3_RED
+	setevent EVENT_CERULEAN_CAVE_OPEN
 	setevent EVENT_DECO_GOLD_TROPHY
 	setevent EVENT_DECO_CHARMANDER_DOLL
 	setevent EVENT_DECO_CLEFAIRY_DOLL

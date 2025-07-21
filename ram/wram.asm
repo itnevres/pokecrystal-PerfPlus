@@ -2947,7 +2947,7 @@ endr
 
 wCmdQueue:: ds CMDQUEUE_CAPACITY * CMDQUEUE_ENTRY_SIZE
 
-	ds 40
+;	ds 40
 
 wMapObjects::
 wPlayerObject:: map_object wPlayer ; player is map object 0
@@ -3032,7 +3032,7 @@ wPokegearFlags::
 	db
 wRadioTuningKnob:: db
 wLastDexMode:: db
-	ds 1
+;	ds 1
 wWhichRegisteredItem:: db
 wRegisteredItem:: db
 
@@ -3041,12 +3041,12 @@ wPlayerState:: db
 wHallOfFameCount:: db
 wExpShareToggle:: db
 wTradeFlags:: flag_array NUM_NPC_TRADES
-	ds 1
+;	ds 1
 wMooMooBerries:: db
 wUndergroundSwitchPositions:: db
 wFarfetchdPosition:: db
 
-	ds 13
+;	ds 13
 
 ; map scene ids
 wPokecenter2FSceneID::                            db
